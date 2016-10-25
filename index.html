@@ -8,7 +8,7 @@
     <script src="socket.io-1.4.5.js"></script>
   </head>
   <body>
-    <div width="800" height="400">
+    <div width="400" height="400">
         <canvas id="myChart"></canvas>
     </div>
     <script>
@@ -36,9 +36,20 @@
 
       var socket = io();
       socket.on("dadosArduino", function(dado){
-        myLineChart.data.labels.push(dado.lbl);
-        myLineChart.data.datasets[0].data.push(dado.valor);
+        var dadosArray = myLineChart.data.datasets[0].data;
+        var labelsArray = myLineChart.data.labels;
+
+        
+        if(dadosArray.length == 5){
+          labelsArray.splice(0,1);
+          dadosArray.splice(0,1);
+        }
+
+        labelsArray.push(dado.lbl);
+        dadosArray.push(dado.valor);
+
         myLineChart.update();
+        console.log(dadosArray.length);
       });
     </script>
   </body>
