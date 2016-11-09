@@ -4,8 +4,8 @@ var express = require('express'),
     io = require('socket.io')(http),
     moment = require('moment'),
     SerialPort = require('serialport'),
-    //portIdentifier = 'COM3';
-    portIdentifier = '/dev/ttyACM0';
+    portIdentifier =
+      (process.platform === 'win32') ? 'COM4' : '/dev/ttyACM0';
 
 var mySerial = new SerialPort(portIdentifier, {
   baudRate: 9600,

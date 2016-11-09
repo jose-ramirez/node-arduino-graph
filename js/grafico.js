@@ -6,6 +6,7 @@ var dados = {
     labels: [],
     datasets: [
       {
+        lineTension: 0,
         label: "Gráfico Arduino",
         fillColor: "rgba(220,220,220,0.2)",
         strokeColor: "rgba(220,220,220,1)",
@@ -16,7 +17,14 @@ var dados = {
         data: []
       }
     ]
+  },
+
+  options:{
+    animation:{
+      duration: 0
+    }
   }
+
 };
 var myLineChart = new Chart(ctx, dados);
 
