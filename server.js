@@ -33,6 +33,7 @@ app.get('/', function(req, res){
   res.sendFile('index.html');
 });
 
-http.listen('3000', function(){
-  console.log('servidor escutando na porta 3000!');
+var porta = '3001';
+http.listen(porta, function(){
+  console.log('servidor escutando na porta ' + porta + '!');
 });
