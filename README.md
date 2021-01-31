@@ -11,4 +11,4 @@ The graph isn't updating correctly, since it isn't updating the graph for values
 
 ## Troubleshooting
 With the given instructions, it should just work; in case it doesn't:
- - Check you have access to the serial port. In some linux distros (Elementary OS, for instance), you don't have access to `ttyACM0` by default. [here](https://playground.arduino.cc/Linux/All/#Permission) is a good place to check everything is ok with the serial port.
+ - Check you have access to the serial port. In some linux distros (Elementary OS, for instance), you don't have access to `ttyACM0` by default. [Here](https://playground.arduino.cc/Linux/All/#Permission) is a good place to check everything is ok with the serial port.
